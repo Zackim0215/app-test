@@ -3,11 +3,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-              <!-- package..class로 가정하고 사용 -->
+              <!-- package..class로 가정하고 사용 -->				 
 <mapper namespace="com.demoweb.mapper.MemberMapper">
-
+	
 	<sql id="memberBasicColumns">memberid, passwd, email</sql>
-
+	
 	<insert id="insertMember" parameterType="Member">
 		INSERT INTO member (<include refid="memberBasicColumns" />)
 		VALUES (#{memberId}, #{passwd}, #{email})
